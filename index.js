@@ -5,6 +5,9 @@ const port = 5000
 //express 버전 4.16 이후부터는 express 내부에 body parser가 포함되므로
 //아래와 같이 사용하면 됨
 // const express = require('express');
+
+const config = require('./config/key');
+
 const { User } = require("./models/User");
 
 //application/x-www-form-urlencoded 형식으로 된걸 분석해서 가져옴
@@ -16,12 +19,12 @@ const { User } = require("./models/User");
 // app.use(express.json());
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://dahyemin:als0602@boilerplate.8czpc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+mongoose.connect(config.mongoURI)
 .then(() => console.log('MongoDB Connected ...'))
 .catch((e) => console.log('MongoDB error: ', e))
 
 app.get('/', (req, res) => {
-  res.send('Hello World!~ 안녕하세요')
+  res.send('Hello World!~ 안녕하세요 반갑습니다~~')
 })
 
 app.post('/register', (req, res) => {
