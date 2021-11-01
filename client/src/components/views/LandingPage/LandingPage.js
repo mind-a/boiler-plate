@@ -3,7 +3,7 @@ import React from 'react'
 function LangingPage() {
     return (
         <div>
-            LandingPage
+            LandingPage 랜딩페이지
         </div>
     )
 }
