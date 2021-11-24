@@ -2,11 +2,12 @@
   "name": "boiler-plate",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./server/index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "backend": "nodemon server/index.js"
   },
   "author": "mind-a",
   "license": "ISC",
